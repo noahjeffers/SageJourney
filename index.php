@@ -19,10 +19,11 @@ if(isset($_POST['submit'])){
 
     $headers = "From:" . $from;
     $headers2 = "From:" . $to;
-    mail($to,$subject,$message,$headers);
-    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    // mail($to,$subject,$message,$headers);
+    // mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    // echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
     // You can also use header('Location: thank_you.php'); to redirect to another page.
+    mail('jeffers.n.88@gmail.com','Yaddah','Thank you yaddah yaddah yaddah');
     }
 
 ?>
@@ -35,6 +36,10 @@ if(isset($_POST['submit'])){
 
 <style>
 
+@font-face{
+  font-family: InkFree;
+  src: url(files/InkFree.woff);
+}
 body{
   background-color: #cdcdcd;
 }
@@ -52,8 +57,17 @@ body{
 .nav-link{
   color: black;
 }
+h3{
+  font-family: InkFree;
+}
+h2{
+  font-family: InkFree;
+}
+div div h5{
+  font-weight: bold;
+  font-family: InkFree;
+}
 </style>
-
   </head>
   <body>
     <div class="container">
@@ -90,7 +104,7 @@ body{
         <?php if($page=="about"):?>
 <!--ABOUT /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
           <div class="card-body">
-            <h3 class="card-title font-weight-bold text-center">About</h3>
+            <h2 class="card-title font-weight-bold text-center">About</h2>
             <p class="card-text">	Sage Journey is a care company that prides itself on providing medicine from the heart.
                     At Sage Journey, all clients will receive a personally catered care plan that will respect culture, language, and the freedom to choose. Person
                     first is the stance at Sage Journey, and staff will always ensure clients are able to participate in their culture, language, and religion. Each
@@ -171,15 +185,16 @@ body{
         <?php elseif($page=="contact"):?>
 <!--contact /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
           <div class="card-body">
-            <h3 class="card-title font-weight-bold text-center">Contact Us</h3>
-
-<form action="" method="post">
-First Name: <input type="text" name="first_name"><br>
-Last Name: <input type="text" name="last_name"><br>
-Email: <input type="text" name="email"><br>
-Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
-<input type="submit" name="submit" value="Submit">
-</form>
+            <h3 class="card-title font-weight-bold text-center">Contact Us</h3><br>
+<!--
+            <form action="" method="post">
+            First Name: <input type="text" name="first_name"><br>
+            Last Name: <input type="text" name="last_name"><br>
+            Email: <input type="text" name="email"><br>
+            Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
+            <input type="submit" name="submit" value="Submit">
+            </form> -->
+              <h5 class=" text-center">Please email Bev at example@example.ca</h5>
           </div>
 
 
